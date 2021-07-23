@@ -19,6 +19,6 @@ const opts = {
   stopTimes: { start: "02:00", end: "21:00" },
 };
 app.listen(port, () => {
-  console.log("Server started successfully");
+  console.log("Server started successfully",port);
   wakeDyno("https://auto-submit-form.herokuapp.com/", opts);
 });
