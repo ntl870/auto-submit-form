@@ -19,8 +19,10 @@ schedule.scheduleJob("40 37 18 * * *", () => {
 });
 
 const port = process.env.PORT || 7000;
-
+const opts = {
+  stopTimes: { start: "02:00", end: "21:00" },
+};
 app.listen(port, () => {
   console.log("Server started successfully");
-  wakeDyno("https://auto-submit-form.herokuapp.com/");
+  wakeDyno("https://auto-submit-form.herokuapp.com/", opts);
 });
