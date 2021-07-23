@@ -5,7 +5,9 @@ app.enable("trust proxy");
 const url = require("./url");
 const { wakeDyno } = require("heroku-keep-awake");
 const axios = require("axios");
-
+app.get("/", (req, res) => {
+  res.json("boom");
+});
 schedule.scheduleJob("00 00 01 * * *", () => {
   try {
     axios.get(url);
@@ -15,7 +17,7 @@ schedule.scheduleJob("00 00 01 * * *", () => {
   }
 });
 schedule.scheduleJob("00 30 * * * *", () => {
-  console.log("Awake");
+  wakeDyno("https://auto-submit-form.herokuapp.com/");
 });
 const port = process.env.PORT || 7000;
 
