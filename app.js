@@ -7,15 +7,11 @@ const { wakeDyno, wakeDynos } = require("heroku-keep-awake");
 app.get("/", () => {
   console.log(123);
 });
-schedule.scheduleJob("50 53 18 * * *", () => {
-  try {
-    axios.get(
-      "https://docs.google.com/forms/d/e/1FAIpQLSd9XF2Vuhs6mGPAbw-1n7tKcPu00Mn6i7VHNGCkTy8aHRYoFQ/formResponse?entry.1331773320=Long&entry.140077259=Nguyen"
-    );
-    console.log("submited");
-  } catch (err) {
-    console.log(err);
-  }
+schedule.scheduleJob("00 00 19 * * *", () => {
+  axios.get(
+    "https://docs.google.com/forms/d/e/1FAIpQLSd9XF2Vuhs6mGPAbw-1n7tKcPu00Mn6i7VHNGCkTy8aHRYoFQ/formResponse?entry.1331773320=Long&entry.140077259=Nguyen"
+  );
+  console.log("submited");
 });
 
 const port = process.env.PORT || 7000;
