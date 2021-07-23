@@ -11,8 +11,10 @@ app.listen(port, () => {
   // wakeDyno("https://auto-submit-form.herokuapp.com/");
 });
 
+const date = new Date();
+console.log(date.getTime());
 
-schedule.scheduleJob("40 14 19 * * *", () => {
+schedule.scheduleJob("30 20 19 * * *", () => {
   // axios.get(
   //   "https://docs.google.com/forms/d/e/1FAIpQLSd9XF2Vuhs6mGPAbw-1n7tKcPu00Mn6i7VHNGCkTy8aHRYoFQ/formResponse?entry.1331773320=Long&entry.140077259=Nguyen"
   // );
