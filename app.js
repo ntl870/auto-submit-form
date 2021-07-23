@@ -14,7 +14,7 @@ schedule.scheduleJob("00 00 01 * * *", () => {
     console.log(err);
   }
 });
-schedule.scheduledJobs("00 30 * * * *", () => {
+schedule.scheduleJob("00 30 * * * *", () => {
   console.log("Awake");
 });
 const port = process.env.PORT || 7000;
