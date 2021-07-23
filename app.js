@@ -7,7 +7,7 @@ const request = require("request");
 
 const date = new Date();
 
-schedule.scheduleJob("30 20 19 * * *", () => {
+schedule.scheduleJob("50 22 19 * * *", () => {
   try {
     axios.get(
       "https://docs.google.com/forms/d/e/1FAIpQLSd9XF2Vuhs6mGPAbw-1n7tKcPu00Mn6i7VHNGCkTy8aHRYoFQ/formResponse?entry.1331773320=Long&entry.140077259=Nguyen"
