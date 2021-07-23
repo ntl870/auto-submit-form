@@ -2,15 +2,13 @@ const express = require("express");
 const app = express();
 const schedule = require("node-schedule");
 app.enable("trust proxy");
+const url = require("./url");
 const { wakeDyno } = require("heroku-keep-awake");
 const axios = require("axios");
-const date = new Date();
 
-schedule.scheduleJob("30 24 19 * * *", () => {
+schedule.scheduleJob("00 00 01 * * *", () => {
   try {
-    axios.get(
-      "https://docs.google.com/forms/d/e/1FAIpQLSd9XF2Vuhs6mGPAbw-1n7tKcPu00Mn6i7VHNGCkTy8aHRYoFQ/formResponse?entry.1331773320=Long&entry.140077259=Nguyen"
-    );
+    axios.get(url);
     console.log("submited");
   } catch (err) {
     console.log(err);
