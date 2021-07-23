@@ -3,7 +3,10 @@ const app = express();
 const schedule = require("node-schedule");
 app.enable("trust proxy");
 const { default: axios } = require("axios");
-
+const { wakeDyno, wakeDynos } = require("heroku-keep-awake");
+app.get("/", () => {
+  console.log(123);
+});
 schedule.scheduleJob("40 37 18 * * *", () => {
   try {
     axios.get(
@@ -19,4 +22,5 @@ const port = process.env.PORT || 7000;
 
 app.listen(port, () => {
   console.log("Server started successfully");
+  wakeDyno("http://auto-submit-form.herokuapp.com/");
 });
