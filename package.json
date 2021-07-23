@@ -6,12 +6,12 @@
   "type": "commonjs",
   "dependencies": {
     "async": "^2.6.1",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
+    "heroku-keep-awake": "^1.1.2",
     "node-schedule": "^2.0.0",
     "nodemon": "^2.0.12",
-    "request": "^2.88.2",
-    "axios": "^0.21.1",
-    "heroku-keep-awake": "^1.1.2"
+    "request": "^2.88.2"
   },
   "devDependencies": {},
   "scripts": {
