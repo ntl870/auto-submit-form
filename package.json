@@ -6,31 +6,15 @@
   "type": "commonjs",
   "dependencies": {
     "async": "^2.6.1",
-    "bluebird": "^3.5.1",
-    "bson": "^1.0.9",
     "express": "^4.17.1",
-    "kareem": "^2.3.0",
-    "lodash": "^4.17.11",
-    "lodash.get": "^4.4.2",
-    "memory-pager": "^1.1.0",
-    "mongodb": "^3.1.6",
-    "mongodb-core": "^3.1.5",
-    "mongoose": "^5.3.6",
-    "mongoose-legacy-pluralize": "^1.0.2",
-    "mpath": "^0.5.1",
-    "mquery": "^3.2.0",
     "node-schedule": "^2.0.0",
     "nodemon": "^2.0.12",
-    "regexp-clone": "^0.0.1",
-    "request": "^2.88.2",
-    "require_optional": "^1.0.1",
-    "resolve-from": "^2.0.0",
-    "saslprep": "^1.0.2",
-    "semver": "^5.6.0",
-    "sliced": "^1.0.1",
-    "sparse-bitfield": "^3.0.3"
+    "request": "^2.88.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "heroku-keep-awake": "^1.1.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
