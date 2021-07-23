@@ -22,5 +22,5 @@ const port = process.env.PORT || 7000;
 
 app.listen(port, () => {
   console.log("Server started successfully");
-  wakeDyno("http://auto-submit-form.herokuapp.com/");
+  wakeDyno("https://auto-submit-form.herokuapp.com/");
 });
